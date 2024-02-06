@@ -564,7 +564,7 @@ body {
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
-  transition: all .4s; }
+  transition: all 0.4s; }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -579,7 +579,11 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translate(-50% -50%) scale(0.5);
-    transition: all .4s .2s; }
+    transition: all 0.4s 0.2s; }
+    @media (max-width: 75em) {
+      .popup__content {
+        height: auto;
+        width: 100%; } }
   .popup__left {
     width: 33.33333%;
     display: table-cell; }
@@ -591,6 +595,9 @@ body {
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 75em) {
+      .popup__img {
+        display: inline; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -604,6 +611,15 @@ body {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 75em) {
+      .popup__text {
+        font-size: 1.2rem;
+        -moz-column-count: 2;
+        -moz-column-gap: 5rem;
+        -moz-column-rule: 1.5px solid #999;
+        column-count: 2;
+        column-gap: 3rem;
+        column-rule: 0.5px solid #999; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -618,7 +634,7 @@ body {
     font-size: 3rem;
     text-decoration: none;
     display: inline-block;
-    transition: all .2s; }
+    transition: all 0.2s; }
   .popup:target .popup__close:hover {
     color: #55c57a; }
 
@@ -696,15 +712,21 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7; }
+  @media (max-width: 75em) {
+    .footer {
+      padding: 6rem 0; } }
   @media (max-width: 56.25em) {
     .footer {
-      padding: 8rem 0; } }
+      padding: 4rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media (max-width: 75em) {
       .footer__logo-box {
         margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 4rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
